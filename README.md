@@ -3,6 +3,24 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Results
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=3c2FQKZvbws
+" target="_blank"><img src="https://img.youtube.com/vi/3c2FQKZvbws/0.jpg" 
+alt="PID results" width="240" height="180" border="10" /></a>
+
+- Effect of P-I-D components
+
+The P, or "proportional" component has the most effect on the car's behavior. Since it is equal to CTE this will cause the car to steer negative to the CTE to keep it close to the center of the lane.
+
+The D, or "differential", component counteracts the P component's tendency to ring and overshoot the center line. A properly tuned D parameter will cause the car to approach the center line smoothly without ringing.
+
+The I, or "integral", component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line. This bias can take several forms, such as a steering drift (as in the Control unit lessons), but I believe that in this particular implementation the I component particularly serves to reduce the CTE around curves.
+
+- Tuning of hyper parameters
+
+I used Twiddle in the python implementation but for this project I used manual tuning to arrive to the initialization values for both PID controllers
+
 ## Dependencies
 
 * cmake >= 3.5
